@@ -35,7 +35,7 @@ class UpdatePerson extends Component {
 
         let people = this.state.people.map(person => {
             // Assign key id firstname and lastname attributes and values to PersonInformation Component.
-            return <PersonInformation key={person.id} id={person.id} firstname={person.title} lastname={person.lastname}/>;
+            return <PersonInformation key={person.id} id={person.id} title={person.title} lastname={person.lastname}/>;
         });
 
         /* This is just embedding a component.*/

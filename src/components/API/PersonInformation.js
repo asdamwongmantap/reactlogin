@@ -5,7 +5,7 @@ import axios from "axios/index";
 // import Header from '../../components/Header';
 class PersonInformation extends Component {
     state = {
-        firstname: this.props.firstname,
+        title: this.props.title,
         lastname: this.props.lastname,
         id: this.props.id
     };
@@ -14,9 +14,9 @@ class PersonInformation extends Component {
 
 
         const ID = this.state.id;
-        const firstname = this.state.firstname;
+        // const firstname = this.state.firstname;
         const data = {
-            firstname: this.state.firstname,
+            title: this.state.title,
             lastname: this.state.lastname
 
         };
@@ -26,7 +26,7 @@ class PersonInformation extends Component {
             .then(response => {
                 console.log(response); // checking response in console.log
 
-                alert("Successfully Updated! USERNAME: " + this.state.firstname);
+                alert("Successfully Updated! USERNAME: " + this.state.title);
             });
     };
 
@@ -35,8 +35,8 @@ class PersonInformation extends Component {
         return (
             <tr>
                 <th>{this.props.id}</th>
-                <th><input type="text" className="form-control" Name="firstname" value={this.state.firstname}
-                           onChange={(event) => this.setState({firstname: event.target.value})}/></th>
+                <th><input type="text" className="form-control" value={this.state.title}
+                           onChange={(event) => this.setState({title: event.target.value})}/></th>
                 <th><input type="text" className="form-control" value={this.state.lastname}
                            onChange={(event) => this.setState({lastname: event.target.value})}/></th>
                 <th>
